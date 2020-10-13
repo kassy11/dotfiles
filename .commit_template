@@ -1,0 +1,26 @@
+
+
+# ==================== Emojis ====================
+# 🎉  :tada: 初めてのコミット
+# 🔖  :bookmark: バージョン関連の作業
+# ✨  :sparkles:  機能追加
+# 🐧  :penguin: 機能修正
+# ✏️   :pencil2: 細かな修正
+# 🐛  :bug: バグ修正
+# 📝  :memo: ドキュメント
+# 🎨  :art: デザインUI/UX
+# 👮  :cop: Lintツール
+# 🤖  :robot: テスト
+# 🚨　:rotating_light: 削除
+# 🚧  :construction: WIP
+#
+# FOR TDD↓
+# 🔥　:fire: レッド
+# 🌱  :seedling: グリーン
+# ♻️   :recycle: リファクタリング
+
+
+# ==================== Format ====================
+# :emoji: Subject
+#
+# Commit body...
