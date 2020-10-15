@@ -32,7 +32,11 @@ alias dj='cd ~/Develop/job-dev'
 alias duni='cd ~/Develop/uni-dev'
 alias di='cd ~/Develop/input-dev'
 alias path="echo $PATH | gsed 's/:/\n/g'"
+alias brewup='brew update && brew upgrade && brew cleanup'
 alias docker9cc='docker run --rm -it -v $HOME/Develop/my-dev/9cc:/home/user/9cc compilerbook'
+
+# anyenv
+eval "$(anyenv init -)"
 
 # nodenv
 export PATH="$HOME/.nodenv/bin:$PATH"
