@@ -67,6 +67,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="/usr/local/sbin:$PATH"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# ngrok
+export PATH="$HOME/local/bin:$PATH"
 
 # psql
 export PATH="/usr/local/Cellar/postgresql/12.3_4/bin:$PATH"
