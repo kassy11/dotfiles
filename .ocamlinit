@@ -9,4 +9,3 @@ let printer ppf = Format.fprintf ppf "\"%s\"";;
 #camlp4o;;
 #require "core.top";;
 #require "core.syntax";;
-open Core.Std
