@@ -111,3 +111,6 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
+
+# ocaml
+alias ocaml="rlwrap ocaml"
