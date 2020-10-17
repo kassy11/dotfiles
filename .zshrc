@@ -19,8 +19,17 @@ setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt correct
+setopt no_beep
 bindkey '^r' history-incremental-pattern-search-backward
 bindkey '^s' history-incremental-pattern-search-forward
+
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
 
 # anyenv
 eval "$(anyenv init -)"
@@ -131,3 +140,5 @@ alias path="echo $PATH | gsed 's/:/\n/g'"
 alias brewup='brew update && brew upgrade && brew cleanup'
 alias docker9cc='docker run --rm -it -v $HOME/Develop/my-dev/9cc:/home/user/9cc compilerbook'
 alias ocaml="rlwrap ocaml"
+alias repo='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+
