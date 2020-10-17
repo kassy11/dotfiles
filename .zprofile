@@ -3,6 +3,3 @@ export EDITOR="vim"
 source ~/.zshrc
 export CLICOLOR=1
 
-
-
-export PATH="$HOME/.cargo/bin:$PATH"
