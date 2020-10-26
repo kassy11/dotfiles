@@ -48,6 +48,9 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
+# goby
+export GOBY_ROOT=$GOPATH/src/github.com/goby-lang/goby
+
 # ruby
 eval "$(rbenv init -)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
@@ -124,7 +127,7 @@ alias cat='bat'
 alias ps='procs'
 alias p='\ps'
 alias grep='rg'
-alias find='fd'
+alias dfind='fd'
 alias ..='cd ..'
 alias mv='mv -i'
 alias cp='cp -i'
@@ -137,8 +140,13 @@ alias dj='cd ~/Develop/job-dev'
 alias duni='cd ~/Develop/uni-dev'
 alias di='cd ~/Develop/input-dev'
 alias path="echo $PATH | gsed 's/:/\n/g'"
+alias clean="rm -rf *(*)"
 alias brewup='brew update && brew upgrade && brew cleanup'
 alias docker9cc='docker run --rm -it -v $HOME/Develop/my-dev/9cc:/home/user/9cc compilerbook'
 alias ocaml="rlwrap ocaml"
 alias repo='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
-
+if [[ -x `which colordiff` ]]; then
+  alias diff='colordiff -u'
+else
+  alias diff='diff -u'
+fi

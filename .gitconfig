@@ -29,7 +29,7 @@
 	timestampResolution = 7000 nanoseconds
 	minRacyThreshold = 0 nanoseconds
 [commit]
-	template = /Users/kotarokashihara/gitemoji/.commit_template
+	template = /Users/kotarokashihara/.commit_template
 [credential]
 	helper = osxkeychain
 [difftool "sourcetree"]
