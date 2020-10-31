@@ -117,6 +117,7 @@ fi
 # ----------------------------------
 # alias
 #-----------------------------------
+### basics
 alias ls='ls -F'
 alias la='ls -a'
 alias ll='exa -ahl --git'
@@ -133,27 +134,47 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias mkdir='mkdir -p'
 alias so='source'
+alias soz='source ~/.zshrc'
 alias dcom='docker-compose'
-alias d='cd ~/Develop'
-alias dd='cd ~/Develop/my-dev'
-alias dj='cd ~/Develop/job-dev'
-alias duni='cd ~/Develop/uni-dev'
-alias ds='cd ~/Develop/sample-code'
 alias path="echo $PATH | gsed 's/:/\n/g'"
 alias clean="rm -rf *(*)"
 alias brewup='brew update && brew upgrade && brew cleanup'
 alias docker9cc='docker run --rm -it -v $HOME/Develop/my-dev/9cc:/home/user/9cc compilerbook'
+alias python='python3'
 alias ocaml="rlwrap ocaml"
 alias tl="tldr"
+alias fzf='fzf --layout=reverse'
+### open Jetbrains IDE
 alias goland="open -b com.jetbrains.goland"
 alias intelliJ="open -b com.jetbrains.intelliJ"
 alias clion="open -b com.jetbrains.clion"
 alias pycharm="open -b com.jetbrains.pycharm"
 alias rubymine="open -b com.jetbrains.rubymine"
 alias webstorm="open -b com.jetbrains.webstorm"
-alias repo='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+### git repo
+alias co='git checkout $(git branch -a | tr -d " " |fzf --layout=reverse --height 100% --prompt "CHECKOUT BRANCH>" --preview "git log --color=always {}" | head -n 1 | sed -e "s/^\*\s*//g" | perl -pe "s/remotes\/origin\///g")' 
+### checkout previewing commit log 
+alias repo='hub browse .' ### open github.com page
+alias d='cd $(ghq root)/github.com'
+### cd ghq project
+alias gcd='cd $(ghq root)/$(ghq list | fzf --layout=reverse --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")'
+### gcd with key-bind
+function ghq-fzf() {
+  local src=$(ghq list | fzf --layout=reverse --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")
+  if [ -n "$src" ]; then
+    BUFFER="cd $(ghq root)/$src"
+    zle accept-line
+  fi
+  zle -R -c
+}
+zle -N ghq-fzf
+bindkey '^]' ghq-fzf
+
+alias grepo='hub browse $(ghq list | fzf --layout=reverse | cut -d "/" -f 2,3)'
+alias updaterepo='ghq list | ghq get --update --parallel'
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
 else
   alias diff='diff -u'
 fi
+

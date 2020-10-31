@@ -12,7 +12,7 @@
 	com = commit -m
 	p = push
 	pu = pull
-    glog = log --all --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Creset%s'
+  glog = log --all --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Creset%s'
 
 [core]
 	editor = nvim
@@ -40,6 +40,7 @@
 	trustExitCode = true
 [ghq]
 	config = /Users/kotarokashihara/go/1.14.4/src
+	root = ~/dev
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true

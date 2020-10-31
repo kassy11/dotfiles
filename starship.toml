@@ -61,7 +61,7 @@ symbol = "🦀 "
 symbol = "🐪 "
 
 [docker_context]
-symbol = "🐳 "
+format = "via [🐋 $context](blue bold)"
 
 [package]
 symbol = "🎁 "
@@ -70,3 +70,6 @@ symbol = "🎁 "
 style = "bold blue"
 symbol = "🅰 "
 displayed_items = "region"
+
+[cmake]
+format = "via CMake "
