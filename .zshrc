@@ -29,6 +29,44 @@ function fzf-history-selection() {
 zle -N fzf-history-selection
 bindkey '^R' fzf-history-selection
 
+# wakatime
+export ZSH_WAKATIME_PROJECT_DETECTION=true
+
+# oh-my-zsh
+plugins=(
+  git
+  bundler
+  dotenv
+  osx
+  aws
+  cargo
+  gradle
+  vagrant
+  sbt
+  brew
+  node
+  pip
+  pyenv
+  yarn
+  zsh-interactive-cd
+  zsh-navigation-tools
+  vscode
+  docker
+  docker-compose
+  ripgrep
+  go
+  golang
+  npm
+  rust
+  repo
+  sudo
+  tig
+  rake
+  rbenv
+  ruby
+  zsh-wakatime
+)
+
 # anyenv
 eval "$(anyenv init -)"
 

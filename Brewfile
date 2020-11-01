@@ -47,14 +47,19 @@ brew "docker-completion"
 brew "docker-compose-completion", link: false
 brew "docker-credential-helper", link: false
 brew "docker-credential-helper-ecr", link: false
+brew "docker-ls"
+brew "docker-machine"
 brew "docker-machine-driver-hyperkit"
+brew "docker-swarm"
 brew "doxygen"
 brew "pkg-config"
 brew "dub"
+brew "editorconfig"
 brew "exa"
 brew "expect"
 brew "fd"
 brew "ffmpeg"
+brew "netpbm"
 brew "figlet"
 brew "fish"
 brew "fontforge"
@@ -91,8 +96,11 @@ brew "icarus-verilog"
 brew "libheif"
 brew "imagemagick"
 brew "imagemagick@6"
+brew "openjdk@11"
+brew "jenkins"
 brew "jenv"
 brew "jq"
+brew "jsonpp"
 brew "kitchen-completion"
 brew "kompose"
 brew "kotlin"
@@ -115,7 +123,6 @@ brew "nodenv"
 brew "ocaml"
 brew "octave"
 brew "opam"
-brew "openjdk@11"
 brew "peco"
 brew "percol"
 brew "pinentry-mac"
@@ -156,6 +163,7 @@ brew "watch"
 brew "webpack"
 brew "wget"
 brew "xpdf"
+brew "yajl"
 brew "yarn"
 brew "zsh"
 brew "zsh-completions"
@@ -199,3 +207,16 @@ cask "the-unarchiver"
 cask "wireshark"
 cask "xquartz"
 cask "zulu8"
+mas "Alfred", id: 405843582
+mas "CleanMyMac X", id: 1339170533
+mas "com.alice.mac.GetPlainText", id: 508368068
+mas "Day One", id: 1055511498
+mas "Evernote", id: 406056744
+mas "GarageBand", id: 682658836
+mas "GoodNotes", id: 1444383602
+mas "LastPass", id: 926036361
+mas "LINE", id: 539883307
+mas "Magnet", id: 441258766
+mas "Pages", id: 409201541
+mas "PopClip", id: 445189367
+mas "ZIPANG", id: 882655968
