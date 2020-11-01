@@ -20,16 +20,14 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt correct
 setopt no_beep
-bindkey '^r' history-incremental-pattern-search-backward
-bindkey '^s' history-incremental-pattern-search-forward
 
-function peco-history-selection() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+function fzf-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | fzf --layout=reverse`
     CURSOR=$#BUFFER
     zle reset-prompt
 }
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
+zle -N fzf-history-selection
+bindkey '^R' fzf-history-selection
 
 # anyenv
 eval "$(anyenv init -)"
@@ -154,7 +152,6 @@ alias webstorm="open -b com.jetbrains.webstorm"
 ### git repo
 alias co='git checkout $(git branch -a | tr -d " " |fzf --layout=reverse --height 100% --prompt "CHECKOUT BRANCH>" --preview "git log --color=always {}" | head -n 1 | sed -e "s/^\*\s*//g" | perl -pe "s/remotes\/origin\///g")' 
 ### checkout previewing commit log 
-alias repo='hub browse .' ### open github.com page
 alias d='cd $(ghq root)/github.com'
 ### cd ghq project
 alias gcd='cd $(ghq root)/$(ghq list | fzf --layout=reverse --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")'
@@ -169,8 +166,22 @@ function ghq-fzf() {
 }
 zle -N ghq-fzf
 bindkey '^]' ghq-fzf
-
-alias grepo='hub browse $(ghq list | fzf --layout=reverse | cut -d "/" -f 2,3)'
+### gcd with project name
+ghq-cd () {
+    if [ -n "$1" ]; then
+        dir="$(ghq list --full-path --exact "$1")"
+        if [ -z "$dir" ]; then
+            echo "no directroies found for '$1'"
+            return 1
+        fi
+        cd "$dir"
+        return
+    fi
+    echo 'usage: ghq-cd $repo'
+    return 1
+}
+alias repo='hub browse .' ### open github.com page
+alias grepo='hub browse $(ghq list | fzf --layout=reverse --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*" | cut -d "/" -f 2,3)'
 alias updaterepo='ghq list | ghq get --update --parallel'
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
