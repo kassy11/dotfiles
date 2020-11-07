@@ -15,7 +15,6 @@ setopt histignorealldups
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt correct
@@ -91,13 +90,12 @@ export GOBY_ROOT=$GOPATH/src/github.com/goby-lang/goby
 eval "$(rbenv init -)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
 
-# zsh+starship
+# zsh+
 export MANPATH="/usr/local/share/man/ja_JP.UTF-8:$(manpath)"
 export PATH="/usr/local/opt/binutils/bin:$PATH"
 fpath=(/path/to/homebrew/share/zsh-completions $fpath)
 autoload -U compinit
 compinit -u
-eval "$(starship init zsh)"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="/usr/local/sbin:$PATH"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
