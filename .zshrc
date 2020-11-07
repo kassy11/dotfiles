@@ -150,10 +150,26 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
+# zinit
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+### End of Zinit's installer chunk
+
+
 # ----------------------------------
 # alias
 #-----------------------------------
-### basics
+## basics
 alias ls='ls -F'
 alias la='ls -a'
 alias ll='exa -ahl --git'
@@ -187,7 +203,8 @@ alias clion="open -b com.jetbrains.clion"
 alias pycharm="open -b com.jetbrains.pycharm"
 alias rubymine="open -b com.jetbrains.rubymine"
 alias webstorm="open -b com.jetbrains.webstorm"
-### git repo
+## abount git & local repo
+alias get='ghq get -p'
 alias co='git checkout $(git branch -a | tr -d " " |fzf --layout=reverse --height 100% --prompt "CHECKOUT BRANCH>" --preview "git log --color=always {}" | head -n 1 | sed -e "s/^\*\s*//g" | perl -pe "s/remotes\/origin\///g")' 
 ### checkout previewing commit log 
 alias d='cd $(ghq root)/github.com'
@@ -226,4 +243,5 @@ if [[ -x `which colordiff` ]]; then
 else
   alias diff='diff -u'
 fi
+
 

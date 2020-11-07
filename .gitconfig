@@ -31,7 +31,7 @@
 [commit]
 	template = /Users/kotarokashihara/.commit_template
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
