@@ -19,7 +19,6 @@ brew upgrade && brew cleanup
 echo -e "\e[32m rm some files...\e[0m"
 rm -rf ~/.zshrc ~/.zprofile ~/.gitconfig ~/.vimrc ~/.commit_template ~/.config/starship.toml
 rm -rf ~/.ocamlinit ~/.octaverc
-touch ~/.config/starship.toml
 echo -e "\e[32m make symbolic links...\e[0m"
 ln -sf $(pwd)/.zshrc ~/.zshrc 
 ln -sf $(pwd)/.zprofile ~/.zprofile
