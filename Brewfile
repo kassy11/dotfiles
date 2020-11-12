@@ -192,10 +192,12 @@ cask "cyberduck"
 cask "db-browser-for-sqlite"
 cask "deckset"
 cask "discord"
+cask "drawio"
 cask "dropbox"
 cask "evernote"
 cask "firefox"
 cask "font-fira-code"
+cask "font-hack-nerd-font"
 cask "font-hackgen"
 cask "gimp"
 cask "github"
@@ -217,22 +219,9 @@ cask "skitch"
 cask "slack"
 cask "sourcetree"
 cask "the-unarchiver"
-cask "google-backup-and-sync"
 cask "virtualbox"
 cask "wireshark"
 cask "workplace-chat"
 cask "xquartz"
 cask "zoomus"
 cask "zulu8"
-mas "Alfred", id: 405843582
-mas "CleanMyMac X", id: 1339170533
-mas "com.alice.mac.GetPlainText", id: 508368068
-mas "Evernote", id: 406056744
-mas "GarageBand", id: 682658836
-mas "GoodNotes", id: 1444383602
-mas "LastPass", id: 926036361
-mas "LINE", id: 539883307
-mas "Magnet", id: 441258766
-mas "Pages", id: 409201541
-mas "PopClip", id: 445189367
-mas "UpNote", id: 1398373917

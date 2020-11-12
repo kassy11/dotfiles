@@ -19,6 +19,18 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" for kite " 
+let g:kite_supported_languages = ['python', 'javascript', 'go', 'ruby']
+set completeopt+=menuone   " show the popup menu even when there is only 1 match
+set completeopt+=noinsert  " don't insert any text until user chooses a match
+set completeopt-=longest   " don't insert the longest common text
+set completeopt+=preview
+autocmd CompleteDone * if !pumvisible() | pclose | endif
+set belloff+=ctrlg  " if vim beeps during completion
+set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus=2  " always display the status line
+
+
 " Use :help 'option' to see the documentation for the given option.
 
 set autoindent
@@ -148,3 +160,6 @@ set listchars=tab:»-,trail:-
 " ビープ音を鳴らさない、可視化もしない
 set visualbell
 set t_vb=
+
+
+

@@ -20,6 +20,7 @@ setopt pushd_ignore_dups
 setopt correct
 setopt no_beep
 
+
 function fzf-history-selection() {
     BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | fzf --layout=reverse`
     CURSOR=$#BUFFER
@@ -180,6 +181,7 @@ alias p='\ps'
 alias grep='rg'
 alias dfind='fd'
 alias ..='cd ..'
+alias back='cd -'
 alias mv='mv -i'
 alias cp='cp -i'
 alias mkdir='mkdir -p'
@@ -194,16 +196,12 @@ alias python='python3'
 alias ocaml="rlwrap ocaml"
 alias tl="tldr"
 alias fzf='fzf --layout=reverse'
-### open Jetbrains IDE
-alias goland="open -b com.jetbrains.goland"
-alias intelliJ="open -b com.jetbrains.intelliJ"
-alias clion="open -b com.jetbrains.clion"
-alias pycharm="open -b com.jetbrains.pycharm"
-alias rubymine="open -b com.jetbrains.rubymine"
-alias webstorm="open -b com.jetbrains.webstorm"
+alias moji='(){echo -n $1 | tr -d '\n' | wc -m}'
+alias word='(){echo -n $1 | tr -d '\n' | wc -w}'
 ## abount git & local repo
 alias get='ghq get -p'
 alias co='git checkout $(git branch -a | tr -d " " |fzf --layout=reverse --height 100% --prompt "CHECKOUT BRANCH>" --preview "git log --color=always {}" | head -n 1 | sed -e "s/^\*\s*//g" | perl -pe "s/remotes\/origin\///g")' 
+alias github='open https://github.com/kassy11'
 ### checkout previewing commit log 
 alias d='cd $(ghq root)/github.com'
 ### cd ghq project
