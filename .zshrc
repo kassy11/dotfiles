@@ -29,9 +29,6 @@ function fzf-history-selection() {
 zle -N fzf-history-selection
 bindkey '^R' fzf-history-selection
 
-# wakatime
-export ZSH_WAKATIME_PROJECT_DETECTION=true
-
 # oh-my-zsh
 plugins=(
   git
@@ -234,8 +231,8 @@ ghq-cd () {
     echo 'usage: ghq-cd $repo'
     return 1
 }
-alias repo='hub browse .' ### open github.com page
-alias grepo='hub browse $(ghq list | fzf --layout=reverse --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*" | cut -d "/" -f 2,3)'
+alias repo='git browse .' ### open github.com page
+alias grepo='git browse $(ghq list | fzf --layout=reverse --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*" | cut -d "/" -f 2,3)'
 alias updaterepo='ghq list | ghq get --update --parallel'
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'

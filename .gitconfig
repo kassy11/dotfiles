@@ -13,7 +13,6 @@
 	p = push
 	pu = pull
   glog = log --all --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Creset%s'
-
 [core]
 	editor = nvim
 	excludesfile = /Users/kotarokashihara/.gitignore_global
