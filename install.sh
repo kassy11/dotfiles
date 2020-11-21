@@ -42,5 +42,10 @@ anyenv install jenv
 anyenv install nodenv
 anyenv install sbtenv
 
+echo -e "\e[32m installing vim color scheme...\e[0m"
+git clone  https://github.com/altercation/vim-colors-solarized.git
+mkdir -p ~/.vim/colors/
+cp vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
+
 exec $SHELL -l
 echo -e "\e[32m finish setting!\e[0m"
