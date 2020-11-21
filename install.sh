@@ -33,11 +33,14 @@ echo -e "\e[32m successfully linked!\e[0m"
 echo -e "\e[32m source .zshrc\e[0m"
 source ~/.zshrc
 
-# echo -e "\e[32m installing some repositories...\e[0m"
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# mkdir -p $(anyenv root)/plugins
-# git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
-# anyenv install rbenv nodenv goenv pyenv jenv
+echo -e "\e[32m installing languages...\e[0m"
+opam init
+anyenv install --init
+anyenv install rbenv 
+anyenv install goenv
+anyenv install jenv
+anyenv install nodenv
+anyenv install sbtenv
 
 exec $SHELL -l
 echo -e "\e[32m finish setting!\e[0m"
