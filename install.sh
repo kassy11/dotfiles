@@ -25,7 +25,7 @@ ln -sf $(pwd)/.zprofile ~/.zprofile
 ln -sf $(pwd)/.gitconfig ~/.gitconfig
 ln -sf $(pwd)/.vimrc ~/.vimrc
 ln -sf $(pwd)/.commit_template ~/.commit_template
-ln -sf $(pwd)/starship.toml ~/.config/starship.toml
+ln -sf $(pwd)/.config ~/.config
 ln -sf $(pwd)/.ocamlinit  ~/.ocamlinit
 ln -sf $(pwd)/.octaverc ~/.octaverc
 echo -e "\e[32m successfully linked!\e[0m"

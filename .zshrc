@@ -105,6 +105,9 @@ export PATH="$HOME/local/bin:$PATH"
 export PATH="/usr/local/Cellar/postgresql/12.3_4/bin:$PATH"
 export PGDATA='/usr/local/var/postgres'
 
+# hub
+eval "$(hub alias -s)"
+
 # jenv
 export JENV_ROOT="$HOME/.jenv"
 if [ -d "${JENV_ROOT}" ]; then

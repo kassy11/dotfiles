@@ -1,0 +1,75 @@
+add_newline = false
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
+
+[character]
+style_success = "bold green"
+style_failure = "bold red"
+symbol = ">"
+error_symbol = "✗"
+use_symbol_for_status = true
+
+[directory]
+style = "#369DE3"
+truncation_length = 0
+truncate_to_repo = false
+
+[git_state]
+progress_divider = " of "
+cherry_pick = "🍒 PICKING"
+
+[git_branch]
+style = "#FFFF99"
+symbol = "🌱 "
+truncation_symbol = ""
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged = '[++$count](green)'
+renamed = "👅"
+deleted = "🗑 "
+
+[java]
+symbol = "🌟 "
+
+[ruby]
+symbol = "💎 "
+
+[golang]
+symbol = "🏎💨 "
+
+[nodejs]
+symbol = "🤖 "
+
+[python]
+symbol = "👾 "
+pyenv_version_name = true
+
+[rust]
+symbol = "🦀 "
+
+[ocaml]
+symbol = "🐪 "
+
+[docker_context]
+format = "via [🐋 $context](blue bold)"
+
+[package]
+symbol = "🎁 "
+
+[aws]
+style = "bold blue"
+symbol = "🅰 "
+displayed_items = "region"
+
+[cmake]
+format = "via CMake "
