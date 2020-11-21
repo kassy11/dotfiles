@@ -38,8 +38,8 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [ghq]
-	config = /Users/kotarokashihara/go/1.14.4/src
 	root = ~/dev
+  user = kassy11
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
