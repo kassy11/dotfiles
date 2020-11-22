@@ -1,0 +1,758 @@
+2020-11-23 00:02:29,665 DEBUG    root            Loaded Command Group: ['gcloud', 'components']
+2020-11-23 00:02:29,672 DEBUG    root            Loaded Command Group: ['gcloud', 'components', 'list']
+2020-11-23 00:02:29,675 DEBUG    root            Running [gcloud.components.list] with arguments: [--format: "json", --quiet: "True"]
+2020-11-23 00:02:30,118 INFO     ___FILE_ONLY___ 
+Your current Cloud SDK version is: 316.0.0
+
+2020-11-23 00:02:30,118 INFO     ___FILE_ONLY___ The latest available version is: 319.0.0
+
+2020-11-23 00:02:30,118 INFO     ___FILE_ONLY___ 
+
+2020-11-23 00:02:30,119 INFO     root            Display format: "table[box,title="Components"](state.name:label=Status,name:label=Name,id:label=ID,size.size(zero="",min=1048576):label=Size:align=right) json"
+2020-11-23 00:02:30,120 INFO     ___FILE_ONLY___ [
+  {
+2020-11-23 00:02:30,120 INFO     ___FILE_ONLY___ 
+    "current_version_string": "2020.10.23",
+2020-11-23 00:02:30,120 INFO     ___FILE_ONLY___ 
+    "id": "core",
+2020-11-23 00:02:30,120 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,120 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,120 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "2020.11.13",
+2020-11-23 00:02:30,120 INFO     ___FILE_ONLY___ 
+    "name": "Cloud SDK Core Libraries",
+2020-11-23 00:02:30,120 INFO     ___FILE_ONLY___ 
+    "size": 16295525,
+2020-11-23 00:02:30,120 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,120 INFO     ___FILE_ONLY___ 
+      "name": "Update Available"
+2020-11-23 00:02:30,121 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,121 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,121 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,121 INFO     ___FILE_ONLY___ 
+    "current_version_string": "4.54",
+2020-11-23 00:02:30,121 INFO     ___FILE_ONLY___ 
+    "id": "gsutil",
+2020-11-23 00:02:30,121 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,121 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,121 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "4.55",
+2020-11-23 00:02:30,121 INFO     ___FILE_ONLY___ 
+    "name": "Cloud Storage Command Line Tool",
+2020-11-23 00:02:30,121 INFO     ___FILE_ONLY___ 
+    "size": 3697917,
+2020-11-23 00:02:30,121 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ 
+      "name": "Update Available"
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ 
+    "id": "app-engine-go",
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.9.71",
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ 
+    "name": "App Engine Go Extensions",
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ 
+    "size": 5058488,
+2020-11-23 00:02:30,122 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+    "id": "appctl",
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "0.1.12",
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+    "name": "Appctl",
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+    "size": 19381598,
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,123 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+    "id": "cbt",
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "0.9.0",
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+    "name": "Cloud Bigtable Command Line Tool",
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+    "size": 7959939,
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,124 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,125 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,125 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,125 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,125 INFO     ___FILE_ONLY___ 
+    "id": "bigtable",
+2020-11-23 00:02:30,125 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,125 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,125 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "",
+2020-11-23 00:02:30,125 INFO     ___FILE_ONLY___ 
+    "name": "Cloud Bigtable Emulator",
+2020-11-23 00:02:30,125 INFO     ___FILE_ONLY___ 
+    "size": 6879056,
+2020-11-23 00:02:30,125 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,125 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,126 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,126 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,126 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,126 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,126 INFO     ___FILE_ONLY___ 
+    "id": "datalab",
+2020-11-23 00:02:30,126 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,126 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,126 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "20190610",
+2020-11-23 00:02:30,126 INFO     ___FILE_ONLY___ 
+    "name": "Cloud Datalab Command Line Tool",
+2020-11-23 00:02:30,126 INFO     ___FILE_ONLY___ 
+    "size": 74849,
+2020-11-23 00:02:30,126 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+    "id": "cloud-datastore-emulator",
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "2.1.0",
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+    "name": "Cloud Datastore Emulator",
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+    "size": 19269211,
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,127 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+    "id": "cloud-firestore-emulator",
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.11.9",
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+    "name": "Cloud Firestore Emulator",
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+    "size": 44169996,
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,128 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+    "id": "pubsub-emulator",
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "0.1.2",
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+    "name": "Cloud Pub/Sub Emulator",
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+    "size": 59017942,
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,129 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ 
+    "id": "cloud_sql_proxy",
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.18.0",
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ 
+    "name": "Cloud SQL Proxy",
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ 
+    "size": 7807156,
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,130 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+    "id": "emulator-reverse-proxy",
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "0.0.1",
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+    "name": "Emulator Reverse Proxy",
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+    "size": 15162435,
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,131 INFO     ___FILE_ONLY___ 
+    "id": "cloud-build-local",
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "0.5.2",
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    "name": "Google Cloud Build Local Builder",
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    "size": 6461890,
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    "id": "docker-credential-gcr",
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,132 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.5.0",
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+    "name": "Google Container Registry's Docker credential helper",
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+    "size": 1890587,
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+    "id": "kind",
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "0.7.0",
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+    "name": "Kind",
+2020-11-23 00:02:30,133 INFO     ___FILE_ONLY___ 
+    "size": 4648885,
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+    "id": "kustomize",
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "3.6.1",
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+    "name": "Kustomize",
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+    "size": 23957302,
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,134 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ 
+    "id": "minikube",
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.14.2",
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ 
+    "name": "Minikube",
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ 
+    "size": 23837106,
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,135 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "id": "nomos",
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.5.0-rc.41",
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "name": "Nomos CLI",
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "size": 18449444,
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "id": "skaffold",
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,136 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.16.0",
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    "name": "Skaffold",
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    "size": 16343974,
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    "id": "anthos-auth",
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.1.3",
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    "name": "anthos-auth",
+2020-11-23 00:02:30,137 INFO     ___FILE_ONLY___ 
+    "size": 17010563,
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ 
+    "id": "config-connector",
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.30.0",
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ 
+    "name": "config-connector",
+2020-11-23 00:02:30,138 INFO     ___FILE_ONLY___ 
+    "size": 43892152,
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+    "id": "alpha",
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "2019.05.17",
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+    "name": "gcloud Alpha Commands",
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+    "size": 775,
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,139 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ 
+    "id": "beta",
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "2019.05.17",
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ 
+    "name": "gcloud Beta Commands",
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ 
+    "size": 774,
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,140 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "id": "app-engine-java",
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.9.83",
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "name": "gcloud app Java Extensions",
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "size": 62305161,
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "id": "app-engine-php",
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,141 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "",
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    "name": "gcloud app PHP Extensions",
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    "size": 22985548,
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    "id": "app-engine-python",
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.9.91",
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    "name": "gcloud app Python Extensions",
+2020-11-23 00:02:30,142 INFO     ___FILE_ONLY___ 
+    "size": 6354885,
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+    "id": "app-engine-python-extras",
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.9.90",
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+    "name": "gcloud app Python Extensions (Extra Libraries)",
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+    "size": 28462109,
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,143 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+    "id": "kpt",
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "0.36.1",
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+    "name": "kpt",
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+    "size": 12629060,
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,144 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "id": "kubectl",
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "1.15.11",
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "name": "kubectl",
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "size": 44426,
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "current_version_string": null,
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "id": "pkg",
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,145 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "",
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+    "name": "pkg",
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+    "size": 0,
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+      "name": "Not Installed"
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ ,
+  {
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+    "current_version_string": "2.0.62",
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+    "id": "bq",
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+    "is_configuration": false,
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+    "is_hidden": false,
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+    "latest_version_string": "2.0.62",
+2020-11-23 00:02:30,146 INFO     ___FILE_ONLY___ 
+    "name": "BigQuery Command Line Tool",
+2020-11-23 00:02:30,147 INFO     ___FILE_ONLY___ 
+    "size": 939194,
+2020-11-23 00:02:30,147 INFO     ___FILE_ONLY___ 
+    "state": {
+2020-11-23 00:02:30,147 INFO     ___FILE_ONLY___ 
+      "name": "Installed"
+2020-11-23 00:02:30,147 INFO     ___FILE_ONLY___ 
+    }
+2020-11-23 00:02:30,147 INFO     ___FILE_ONLY___ 
+  }
+2020-11-23 00:02:30,147 INFO     ___FILE_ONLY___ 
+]
+

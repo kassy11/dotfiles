@@ -9,7 +9,7 @@ echo -e "\e[32m installing homebrew...\e[0m"
 echo -e "\e[32m run brew update...\e[0m"
 brew update
 
-echo -e "\e[32m install homebrew packages...\e[0m"
+echo -e "\e[32m install homebrew and cask packages...\e[0m"
 brew bundle
 echo -e "\e[32m successfully installed! \e[0m"
 
