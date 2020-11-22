@@ -218,8 +218,6 @@ cask "spotify"
 cask "the-unarchiver"
 cask "virtualbox"
 cask "visual-studio-code"
-cask "vmware-fusion"
-cask "wallpaper-wizard"
 cask "zoomus"
 cask "zulu8"
 mas "CleanMyMac X", id: 1339170533
