@@ -88,15 +88,24 @@ export GOBY_ROOT=$GOPATH/src/github.com/goby-lang/goby
 eval "$(rbenv init -)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
 
-# zsh+
+# zsh
 export MANPATH="/usr/local/share/man/ja_JP.UTF-8:$(manpath)"
 export PATH="/usr/local/opt/binutils/bin:$PATH"
-fpath=(/path/to/homebrew/share/zsh-completions $fpath)
-autoload -U compinit
-compinit -u
+## zsh-completion
+if type brew &>/dev/null; then
+  FPATH=/usr/local/share/zsh-completions:/path/to/homebrew/share/zsh-completions:/Users/kotarokashihara/.zinit/completions:/path/to/homebrew/share/zsh-completions:/usr/local/share/zsh/site-functions:/usr/share/zsh/site-functions:/usr/share/zsh/5.8/functions
+
+  autoload -Uz compinit
+  compinit
+fi
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+## jetbrains command
 export PATH="/usr/local/sbin:$PATH"
+## zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+## zsh-autosuggest
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # local/bin my commands
 export PATH="$HOME/local/bin:$PATH"
@@ -126,6 +135,10 @@ export PATH="/Applications/Julia-1.5.app/Contents/Resources/julia/bin:$PATH"
 
 # rust
 export PATH="/Users/kotarokashihara/.cargo/bin:$PATH"
+
+# android
+export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+
 
 # python
 # >>> conda initialize >>>
@@ -163,6 +176,69 @@ source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
+
+
+###-begin-npm-completion-###
+#
+# npm command completion script
+#
+# Installation: npm completion >> ~/.bashrc  (or ~/.zshrc)
+# Or, maybe: npm completion > /usr/local/etc/bash_completion.d/npm
+#
+
+if type complete &>/dev/null; then
+  _npm_completion () {
+    local words cword
+    if type _get_comp_words_by_ref &>/dev/null; then
+      _get_comp_words_by_ref -n = -n @ -n : -w words -i cword
+    else
+      cword="$COMP_CWORD"
+      words=("${COMP_WORDS[@]}")
+    fi
+
+    local si="$IFS"
+    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$cword" \
+                           COMP_LINE="$COMP_LINE" \
+                           COMP_POINT="$COMP_POINT" \
+                           npm completion -- "${words[@]}" \
+                           2>/dev/null)) || return $?
+    IFS="$si"
+    if type __ltrim_colon_completions &>/dev/null; then
+      __ltrim_colon_completions "${words[cword]}"
+    fi
+  }
+  complete -o default -F _npm_completion npm
+elif type compdef &>/dev/null; then
+  _npm_completion() {
+    local si=$IFS
+    compadd -- $(COMP_CWORD=$((CURRENT-1)) \
+                 COMP_LINE=$BUFFER \
+                 COMP_POINT=0 \
+                 npm completion -- "${words[@]}" \
+                 2>/dev/null)
+    IFS=$si
+  }
+  compdef _npm_completion npm
+elif type compctl &>/dev/null; then
+  _npm_completion () {
+    local cword line point words si
+    read -Ac words
+    read -cn cword
+    let cword-=1
+    read -l line
+    read -ln point
+    si="$IFS"
+    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
+                       COMP_LINE="$line" \
+                       COMP_POINT="$point" \
+                       npm completion -- "${words[@]}" \
+                       2>/dev/null)) || return $?
+    IFS="$si"
+  }
+  compctl -K _npm_completion npm
+fi
+###-end-npm-completion-###
+
 
 
 # ----------------------------------
@@ -242,5 +318,3 @@ if [[ -x `which colordiff` ]]; then
 else
   alias diff='diff -u'
 fi
-
-

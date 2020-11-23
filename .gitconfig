@@ -15,7 +15,7 @@
   glog = log --all --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Creset%s'
 [core]
 	editor = nvim
-	excludesfile = /Users/kotarokashihara/.gitignore_global
+	excludesfile = /Users/kotarokashihara/dotfiles/.gitignore_global
 	autoCRLF = false
 	quotepath = false
 	pager = LESSCHARSET=utf-8 less
