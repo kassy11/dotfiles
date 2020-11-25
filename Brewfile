@@ -120,6 +120,7 @@ brew "neovim"
 brew "netlify-cli"
 brew "nginx"
 brew "nim"
+brew "ninja"
 brew "nkf"
 brew "nodenv"
 brew "ocaml"
@@ -223,8 +224,14 @@ cask "setapp"
 cask "sonic-pi"
 cask "spotify"
 cask "the-unarchiver"
+cask "unity-hub"
 cask "virtualbox"
 cask "visual-studio-code"
 cask "wallpaper-wizard"
 cask "zoomus"
 cask "zulu8"
+mas "CleanMyMac X", id: 1339170533
+mas "GoodNotes", id: 1444383602
+mas "LINE", id: 539883307
+mas "Magnet", id: 441258766
+mas "Xcode", id: 497799835
