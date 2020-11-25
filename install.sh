@@ -25,9 +25,10 @@ ln -sf $(pwd)/.zprofile ~/.zprofile
 ln -sf $(pwd)/.gitconfig ~/.gitconfig
 ln -sf $(pwd)/.vimrc ~/.vimrc
 ln -sf $(pwd)/.commit_template ~/.commit_template
-ln -sf $(pwd)/.config ~/.config
+ln -s  $(pwd)/.config/starship.toml ~/.config/starship.toml
 ln -sf $(pwd)/.ocamlinit  ~/.ocamlinit
 ln -sf $(pwd)/.octaverc ~/.octaverc
+ln -s  $(pwd)/.tmux.conf ~/.tmux.conf
 echo -e "\e[32m successfully linked!\e[0m"
 
 echo -e "\e[32m source .zshrc\e[0m"
