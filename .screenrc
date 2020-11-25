@@ -1,0 +1,28 @@
+defutf8 on
+defencoding utf8
+encoding utf8 utf8
+
+startup_message off
+vbell off
+
+defbce on
+term xterm-256color
+
+
+# ステータスライン
+hardstatus alwayslastline "%{= cd} %-w%{= wk} %n %t* %{-}%+w %= LoadAVG [%l] "
+
+# エスケープキー
+escape ^Tt
+
+# マウススクロール
+termcapinfo xterm* ti@:te@
+
+# スクロール行数
+defscrollback 10000
+
+# vimとかlessとかtigとかのバッファを終了時に消す
+altscreen on
+
+# デフォルトシェル
+shell $SHELL
