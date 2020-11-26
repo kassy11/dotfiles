@@ -29,6 +29,8 @@ ln -s  $(pwd)/.config/starship.toml ~/.config/starship.toml
 ln -sf $(pwd)/.ocamlinit  ~/.ocamlinit
 ln -sf $(pwd)/.octaverc ~/.octaverc
 ln -s  $(pwd)/.tmux.conf ~/.tmux.conf
+ln -s $(pwd)/homebrew-update.plist ~/Library/LaunchAgents/homebrew-update.plist
+launchctl load ~/Library/LaunchAgents/homebrew-update.plist
 echo -e "\e[32m successfully linked!\e[0m"
 
 echo -e "\e[32m source .zshrc\e[0m"

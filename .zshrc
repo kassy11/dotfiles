@@ -139,6 +139,9 @@ export PATH="/Users/kotarokashihara/.cargo/bin:$PATH"
 # android
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 
+# brew
+export PATH="/usr/local/sbin:$PATH"
+
 
 # python
 # >>> conda initialize >>>
@@ -245,6 +248,7 @@ fi
 # alias
 #-----------------------------------
 ## basics
+alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
 alias ls='ls -F'
 alias la='ls -a'
 alias ll='ls -alF'
