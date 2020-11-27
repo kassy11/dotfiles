@@ -127,7 +127,7 @@ brew "opam"
 brew "openjdk@11"
 brew "peco"
 brew "percol"
-brew "php", restart_service: true
+brew "php"
 brew "php-cs-fixer"
 brew "pinentry-mac"
 brew "pip-completion"
@@ -232,3 +232,9 @@ cask "wavesurfer"
 cask "xquartz"
 cask "zoomus"
 cask "zulu8"
+mas "CleanMyMac X", id: 1339170533
+mas "GoodNotes", id: 1444383602
+mas "LINE", id: 539883307
+mas "Magnet", id: 441258766
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835

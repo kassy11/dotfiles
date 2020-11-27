@@ -18,6 +18,7 @@ brew upgrade && brew cleanup
 printf '\033[32m%s\033[m\n' 'remove some files for symlinks'
 rm -rf ~/.zshrc ~/.zprofile ~/.gitconfig ~/.vimrc ~/.commit_template ~/.config/starship.toml
 rm -rf ~/.ocamlinit ~/.octaverc
+rm -rf ~/Library/LaunchAgents/homebrew-update.plist
 
 printf '\033[32m%s\033[m\n' 'make symbolic links...'
 ln -sf $(pwd)/.zshrc ~/.zshrc 
@@ -36,19 +37,43 @@ printf '\033[32m%s\033[m\n' 'source .zshrc...'
 source ~/.zshrc
 
 printf '\033[32m%s\033[m\n' 'installing xxxenv...'
-opam init
-anyenv install --init
-anyenv install rbenv 
-anyenv install goenv
-anyenv install jenv
-anyenv install nodenv
-anyenv install scalaenv
-anyenv install sbtenv
+
+if [ ! -e ~/.anyenv ];then
+  anyenv install --init
+fi
+if [ ! -e ~/.anyenv/envs/jenv ];then
+  anyenv install jenv
+fi
+if [ ! -e ~/.anyenv/envs/nodenv ];then
+  anyenv install nodenv
+fi
+if [ ! -e ~/.anyenv/envs/rbenv ];then
+  anyenv install rbenv
+fi
+if [ ! -e ~/.anyenv/envs/goenv ];then
+  anyenv install goenv
+fi
+if [ ! -e ~/.anyenv/envs/scalaenv ];then
+  anyenv install scalaenv
+fi
+if [ ! -e ~/.anyenv/envs/sbtenv ];then
+  anyenv install sbtenv
+fi
+
+printf '\033[32m%s\033[m\n' 'init opam...'
+if [ ! -e ~/.opam ];then
+  opam init
+fi
 
 printf '\033[32m%s\033[m\n' 'installing vim color scheme...'
-git clone  https://github.com/altercation/vim-colors-solarized.git ~/vim-colors-solarized
-mkdir -p ~/.vim/colors/
-cp ~/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
+if [ ! -e ~/vim-colors/vim-color-solarized ];then
+  mkdir ~/vim-colors
+  git clone  https://github.com/altercation/vim-colors-solarized.git ~/vim-colors/vim-colors-solarized
+fi
+if [ ! -e ~/.vim/colors/solarized.vim ];then
+  mkdir -p ~/.vim/colors/
+  cp ~/vim-colors/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
+fi
 
 exec $SHELL -l
 echo -e "\e[32m finish setting!\e[0m"
