@@ -29,40 +29,6 @@ function fzf-history-selection() {
 zle -N fzf-history-selection
 bindkey '^R' fzf-history-selection
 
-# oh-my-zsh
-plugins=(
-  git
-  bundler
-  dotenv
-  osx
-  aws
-  cargo
-  gradle
-  vagrant
-  sbt
-  brew
-  node
-  pip
-  pyenv
-  yarn
-  zsh-interactive-cd
-  zsh-navigation-tools
-  vscode
-  docker
-  docker-compose
-  ripgrep
-  go
-  golang
-  npm
-  rust
-  repo
-  sudo
-  tig
-  rake
-  rbenv
-  ruby
-  zsh-wakatime
-)
 
 # anyenv
 eval "$(anyenv init -)"
@@ -164,22 +130,6 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
-
-# zinit
-### Added by Zinit's installer
-if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
-        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-        print -P "%F{160}▓▒░ The clone has failed.%f%b"
-fi
-
-source "$HOME/.zinit/bin/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-### End of Zinit's installer chunk
-
 
 ###-begin-npm-completion-###
 #
@@ -283,6 +233,7 @@ alias moji='(){echo -n $1 | tr -d '\n' | wc -m}'
 alias word='(){echo -n $1 | tr -d '\n' | wc -w}'
 ## abount git & local repo
 alias get='ghq get -p'
+## git checkout woth fzf
 alias co='git checkout $(git branch -a | tr -d " " |fzf --layout=reverse --height 100% --prompt "CHECKOUT BRANCH>" --preview "git log --color=always {}" | head -n 1 | sed -e "s/^\*\s*//g" | perl -pe "s/remotes\/origin\///g")' 
 alias github='open https://github.com/kassy11'
 ### checkout previewing commit log 
@@ -299,7 +250,7 @@ function ghq-fzf() {
   zle -R -c
 }
 zle -N ghq-fzf
-bindkey '^]' ghq-fzf
+bindkey '^]' ghq-fzf ## control+]でgcdが起動するように
 ### gcd with project name
 ghq-cd () {
     if [ -n "$1" ]; then
@@ -386,3 +337,29 @@ fi
 #     fi
 # }
 # tmux_automatically_attach_session
+
+# ### Added by Zinit's installer
+# if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+#     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+#     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+#     command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+#         print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+#         print -P "%F{160}▓▒░ The clone has failed.%f%b"
+# fi
+
+# source "$HOME/.zinit/bin/zinit.zsh"
+# autoload -Uz _zinit
+# (( ${+_comps} )) && _comps[zinit]=_zinit
+
+# # Gitの変更状態がわかる ls。ls の代わりにコマンド `k` を実行するだけ。
+# zinit light supercrabtree/k
+# # AWS CLI v2の補完。
+# # 要 AWS CLI v2
+# # この順序で記述しないと `complete:13: command not found: compdef` のようなエラーになるので注意
+# autoload bashcompinit && bashcompinit
+# source ~/.zinit/plugins/drgr33n---oh-my-zsh_aws2-plugin/aws2_zsh_completer.sh
+# complete -C '/usr/local/bin/aws_completer' aws
+# zinit light drgr33n/oh-my-zsh_aws2-plugin
+# # iTerm2を使っている場合に、コマンド `tt タブ名` でタブ名を変更できる
+# zinit light gimbo/iterm2-tabs.zsh
+# ### End of Zinit's installer chunk

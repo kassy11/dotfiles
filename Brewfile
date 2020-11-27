@@ -46,9 +46,7 @@ brew "django-completion"
 brew "docker", link: false
 brew "docker-clean"
 brew "docker-completion"
-brew "docker-compose-completion", link: false
-brew "docker-credential-helper", link: false
-brew "docker-credential-helper-ecr", link: false
+brew "docker-compose-completion"
 brew "docker-ls"
 brew "docker-machine"
 brew "docker-machine-driver-hyperkit"
@@ -129,7 +127,7 @@ brew "opam"
 brew "openjdk@11"
 brew "peco"
 brew "percol"
-brew "php"
+brew "php", restart_service: true
 brew "php-cs-fixer"
 brew "pinentry-mac"
 brew "pip-completion"
@@ -204,7 +202,6 @@ cask "evernote"
 cask "font-fira-code"
 cask "font-hack-nerd-font"
 cask "font-hackgen"
-cask "google-backup-and-sync"
 cask "google-chrome"
 cask "google-japanese-ime"
 cask "imageoptim"
@@ -223,6 +220,7 @@ cask "proxyman"
 cask "racket"
 cask "sequel-pro"
 cask "setapp"
+cask "simplenote"
 cask "sonic-pi"
 cask "spotify"
 cask "the-unarchiver"
@@ -231,10 +229,6 @@ cask "virtualbox"
 cask "visual-studio-code"
 cask "wallpaper-wizard"
 cask "wavesurfer"
+cask "xquartz"
 cask "zoomus"
 cask "zulu8"
-mas "CleanMyMac X", id: 1339170533
-mas "GoodNotes", id: 1444383602
-mas "LINE", id: 539883307
-mas "Magnet", id: 441258766
-mas "Xcode", id: 497799835
