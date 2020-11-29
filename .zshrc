@@ -50,6 +50,11 @@ export PATH="$PATH:$GOPATH/bin"
 # goby
 export GOBY_ROOT=$GOPATH/src/github.com/goby-lang/goby
 
+# sdkman
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/kotarokashihara/.sdkman"
+[[ -s "/Users/kotarokashihara/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/kotarokashihara/.sdkman/bin/sdkman-init.sh"
+
 # ruby
 eval "$(rbenv init -)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
@@ -82,13 +87,6 @@ export PGDATA='/usr/local/var/postgres'
 
 # hub
 eval "$(hub alias -s)"
-
-# jenv
-export JENV_ROOT="$HOME/.jenv"
-if [ -d "${JENV_ROOT}" ]; then
-  export PATH="$JENV_ROOT/bin:$PATH"
-  eval "$(jenv init -)"
-fi
 
 # mysql
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
@@ -267,7 +265,6 @@ ghq-cd () {
 }
 alias repo='git browse .' ### open github.com page
 alias grepo='git browse $(ghq list | fzf --layout=reverse --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*" | cut -d "/" -f 2,3)'
-alias updaterepo='ghq list | ghq get --update --parallel'
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
 else
@@ -363,3 +360,5 @@ fi
 # # iTerm2を使っている場合に、コマンド `tt タブ名` でタブ名を変更できる
 # zinit light gimbo/iterm2-tabs.zsh
 # ### End of Zinit's installer chunk
+
+

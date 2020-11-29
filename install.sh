@@ -41,9 +41,6 @@ printf '\033[32m%s\033[m\n' 'installing xxxenv...'
 if [ ! -e ~/.anyenv ];then
   anyenv install --init
 fi
-if [ ! -e ~/.anyenv/envs/jenv ];then
-  anyenv install jenv
-fi
 if [ ! -e ~/.anyenv/envs/nodenv ];then
   anyenv install nodenv
 fi
@@ -53,17 +50,27 @@ fi
 if [ ! -e ~/.anyenv/envs/goenv ];then
   anyenv install goenv
 fi
-if [ ! -e ~/.anyenv/envs/scalaenv ];then
-  anyenv install scalaenv
-fi
-if [ ! -e ~/.anyenv/envs/sbtenv ];then
-  anyenv install sbtenv
-fi
 
 printf '\033[32m%s\033[m\n' 'init opam...'
 if [ ! -e ~/.opam ];then
   opam init
 fi
+
+printf '\033[32m%s\033[m\n' 'installing sdkman...'
+if [ ! -e ~/.sdkman ];then
+  curl -s "https://get.sdkman.io" | bash
+  source "$HOME/.sdkman/bin/sdkman-init.sh"
+  sdk env init
+  sdk install java
+  sdk install gradle
+  sdk install maven
+  sdk install kotlin
+  sdk install groovy
+  sdk install sbt
+fi
+
+
+
 
 printf '\033[32m%s\033[m\n' 'installing vim color scheme...'
 if [ ! -e ~/vim-colors/vim-color-solarized ];then
@@ -74,6 +81,8 @@ if [ ! -e ~/.vim/colors/solarized.vim ];then
   mkdir -p ~/.vim/colors/
   cp ~/vim-colors/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 fi
+
+
 
 exec $SHELL -l
 echo -e "\e[32m finish setting!\e[0m"

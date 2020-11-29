@@ -160,6 +160,3 @@ set listchars=tab:»-,trail:-
 " ビープ音を鳴らさない、可視化もしない
 set visualbell
 set t_vb=
-
-
-
