@@ -219,6 +219,7 @@ alias mkdir='mkdir -p'
 alias so='source'
 alias soz='source ~/.zshrc'
 alias dcom='docker-compose'
+alias docom='docker-compose'
 alias path="echo $PATH | gsed 's/:/\n/g'"
 alias clean="rm -rf *(*)"
 alias brewup='brew update && brew upgrade && brew upgrade --cask && brew cleanup'
@@ -263,7 +264,7 @@ ghq-cd () {
     echo 'usage: ghq-cd $repo'
     return 1
 }
-alias repo='git browse .' ### open github.com page
+alias repo='git browse' ### open github.com page
 alias grepo='git browse $(ghq list | fzf --layout=reverse --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*" | cut -d "/" -f 2,3)'
 if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'

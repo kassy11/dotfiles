@@ -1,3 +1,2 @@
 setenv('GNUTERM', 'qt')
 graphics_toolkit("gnuplot")
-addpath('/Users/kotarokashihara/Develop/my-dev/input/ml-cousera')

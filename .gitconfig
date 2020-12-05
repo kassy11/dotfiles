@@ -9,7 +9,7 @@
 	dic = diff --cached
 	tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 	c = commit
-	com = commit -m
+	com = commit
 	p = push
 	pu = pull
   glog = log --all --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Creset%s'
@@ -45,3 +45,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[grep]
+	lineNumber = true
+[fetch]
+	prune = true
