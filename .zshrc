@@ -4,7 +4,7 @@
 # prompt
 cdpath=(~)
 
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'e:|[._-]=* e:|=*' 'l:|=* e:|=*'
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 zstyle ':completion:*' insert-tab false
 zstyle ':completion:*:default' menu select=2
@@ -19,7 +19,14 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt correct
 setopt no_beep
-
+unsetopt cdablevars
+setopt auto_cd
+## cdしたあとにlsするようにする
+chpwd() {
+    if [[ $(pwd) != $HOME ]]; then;
+        ls
+    fi
+}
 
 function fzf-history-selection() {
     BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | fzf --layout=reverse`
@@ -59,24 +66,12 @@ export SDKMAN_DIR="/Users/kotarokashihara/.sdkman"
 eval "$(rbenv init -)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
 
-# zsh
+# path
 export MANPATH="/usr/local/share/man/ja_JP.UTF-8:$(manpath)"
 export PATH="/usr/local/opt/binutils/bin:$PATH"
-## zsh-completion
-if type brew &>/dev/null; then
-  FPATH=/usr/local/share/zsh-completions:/path/to/homebrew/share/zsh-completions:/Users/kotarokashihara/.zinit/completions:/path/to/homebrew/share/zsh-completions:/usr/local/share/zsh/site-functions:/usr/share/zsh/site-functions:/usr/share/zsh/5.8/functions
-
-  autoload -Uz compinit
-  compinit
-fi
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 ## jetbrains command
 export PATH="/usr/local/sbin:$PATH"
-## zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-## zsh-autosuggest
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # local/bin my commands
 export PATH="$HOME/local/bin:$PATH"
@@ -204,7 +199,6 @@ alias vi='vim'
 alias rm='trash'
 alias cat='bat'
 alias ps='procs'
-alias p='\ps'
 alias top='htop'
 alias t='\top'
 alias grep='rg'
@@ -225,6 +219,8 @@ alias clean="rm -rf *(*)"
 alias brewup='brew update && brew upgrade && brew upgrade --cask && brew cleanup'
 alias docker9cc='docker run --rm -it -v $HOME/Develop/my-dev/9cc:/home/user/9cc compilerbook'
 alias python='python3'
+alias py='python3'
+alias p='python3'
 alias ocaml="rlwrap ocaml"
 alias tl="tldr"
 alias fzf='fzf --layout=reverse'
@@ -272,8 +268,7 @@ else
   alias diff='diff -u'
 fi
 
-
-# tmux
+# # tmux
 # function is_exists() { type "$1" >/dev/null 2>&1; return $?; }
 # function is_osx() { [[ $OSTYPE == darwin* ]]; }
 # function is_screen_running() { [ ! -z "$STY" ]; }
@@ -334,32 +329,21 @@ fi
 #         fi
 #     fi
 # }
-# tmux_automatically_attach_session
 
-# ### Added by Zinit's installer
-# if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-#     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-#     command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-#     command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
-#         print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-#         print -P "%F{160}▓▒░ The clone has failed.%f%b"
-# fi
+### zplug
+source ~/.zplug/init.zsh
 
-# source "$HOME/.zinit/bin/zinit.zsh"
-# autoload -Uz _zinit
-# (( ${+_comps} )) && _comps[zinit]=_zinit
+# 構文のハイライト(https://github.com/zsh-users/zsh-syntax-highlighting)
+zplug "zsh-users/zsh-syntax-highlighting"
+# タイプ補完
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
 
-# # Gitの変更状態がわかる ls。ls の代わりにコマンド `k` を実行するだけ。
-# zinit light supercrabtree/k
-# # AWS CLI v2の補完。
-# # 要 AWS CLI v2
-# # この順序で記述しないと `complete:13: command not found: compdef` のようなエラーになるので注意
-# autoload bashcompinit && bashcompinit
-# source ~/.zinit/plugins/drgr33n---oh-my-zsh_aws2-plugin/aws2_zsh_completer.sh
-# complete -C '/usr/local/bin/aws_completer' aws
-# zinit light drgr33n/oh-my-zsh_aws2-plugin
-# # iTerm2を使っている場合に、コマンド `tt タブ名` でタブ名を変更できる
-# zinit light gimbo/iterm2-tabs.zsh
-# ### End of Zinit's installer chunk
-
-
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+zplug load

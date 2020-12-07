@@ -36,6 +36,9 @@ launchctl load ~/Library/LaunchAgents/homebrew-update.plist
 printf '\033[32m%s\033[m\n' 'source .zshrc...'
 source ~/.zshrc
 
+printf '\033[32m%s\033[m\n' 'installing zplug...'
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer
+
 printf '\033[32m%s\033[m\n' 'installing xxxenv...'
 
 if [ ! -e ~/.anyenv ];then

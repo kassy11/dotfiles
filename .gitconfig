@@ -9,7 +9,7 @@
 	dic = diff --cached
 	tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 	c = commit
-	com = commit
+	com = commit -m
 	p = push
 	pu = pull
   glog = log --all --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Creset%s'
