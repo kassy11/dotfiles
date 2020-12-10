@@ -42,16 +42,23 @@ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/instal
 printf '\033[32m%s\033[m\n' 'installing xxxenv...'
 
 if [ ! -e ~/.anyenv ];then
+  printf '\033[32m%s\033[m\n' 'init anyenv'
   anyenv install --init
 fi
 if [ ! -e ~/.anyenv/envs/nodenv ];then
+  printf '\033[32m%s\033[m\n' 'installing node through nodenv...'
   anyenv install nodenv
+  nodenv install 15.2.1
 fi
 if [ ! -e ~/.anyenv/envs/rbenv ];then
+  printf '\033[32m%s\033[m\n' 'installing ruby through rbenv...'
   anyenv install rbenv
+  rbenv install 2.7.2
 fi
 if [ ! -e ~/.anyenv/envs/goenv ];then
+  printf '\033[32m%s\033[m\n' 'installing golang through goenv...' 
   anyenv install goenv
+  goenv install 1.15.3
 fi
 
 printf '\033[32m%s\033[m\n' 'init opam...'
@@ -71,9 +78,6 @@ if [ ! -e ~/.sdkman ];then
   sdk install groovy
   sdk install sbt
 fi
-
-
-
 
 printf '\033[32m%s\033[m\n' 'installing vim color scheme...'
 if [ ! -e ~/vim-colors/vim-color-solarized ];then
