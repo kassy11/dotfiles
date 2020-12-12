@@ -505,3 +505,18 @@ _gh()
 if [ "$funcstack[1]" = "_gh" ]; then
 	_gh
 fi
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/kotarokashihara/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+# pip zsh completion start
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
+}
+compctl -K _pip_completion pip
+# pip zsh completion end
+

@@ -183,6 +183,7 @@ brew "goby-lang/goby/goby"
 brew "heroku/brew/heroku"
 brew "pivotal/tap/springboot"
 brew "sanemat/font/ricty"
+cask "alacritty"
 cask "alfred"
 cask "android-platform-tools"
 cask "android-sdk"
@@ -215,7 +216,6 @@ cask "proxyman"
 cask "racket"
 cask "sequel-pro"
 cask "setapp"
-cask "sonic-pi"
 cask "spotify"
 cask "the-unarchiver"
 cask "unity-hub"
@@ -225,12 +225,3 @@ cask "wavesurfer"
 cask "xquartz"
 cask "zoom"
 cask "zoomus"
-mas "CleanMyMac X", id: 1339170533
-mas "DuckDuckGo Privacy Essentials", id: 1482920575
-mas "GoodNotes", id: 1444383602
-mas "Keynote", id: 409183694
-mas "LINE", id: 539883307
-mas "Magnet", id: 441258766
-mas "Pages", id: 409201541
-mas "Simplenote", id: 692867256
-mas "Wallpaper Wizard", id: 1266674560
