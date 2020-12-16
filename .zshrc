@@ -2,7 +2,6 @@
 # environment
 #-----------------------------------
 # prompt
-cdpath=(~)
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'e:|[._-]=* e:|=*' 'l:|=* e:|=*'
 zstyle ':completion:*' list-colors "${LS_COLORS}"
@@ -19,8 +18,8 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt correct
 setopt no_beep
+unsetopt cdable_vars
 unsetopt cdablevars
-setopt auto_cd
 ## cdしたあとにlsするようにする
 chpwd() {
     if [[ $(pwd) != $HOME ]]; then;

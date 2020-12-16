@@ -106,7 +106,7 @@ brew "jq"
 brew "jsonpp"
 brew "kitchen-completion"
 brew "kompose"
-brew "kubernetes-cli", link: false
+brew "kubernetes-cli"
 brew "lsd"
 brew "mariadb"
 brew "mas"
