@@ -5,28 +5,25 @@
 	st = status --short --branch
 	co = checkout
 	br = branch
-	di = diff
-	dic = diff --cached
+	di = diff --histogram
+	dic = diff --cached --histogram
+  dit = difftool
+  ditc = difftool --cached --histogram
 	tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 	c = commit
-	com = commit
+  com = commit
+  comment = commit -m
 	p = push
 	pu = pull
   glog = log --all --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Creset%s'
 [core]
 	editor = nvim
-	excludesfile = /Users/kotarokashihara/dotfiles/.gitignore_global
+	excludesfile = /Users/kotarokashihara/.gitignore_global
 	autoCRLF = false
 	quotepath = false
 	pager = LESSCHARSET=utf-8 less
 [color]
 	ui = true
-[filesystem "AdoptOpenJDK|11.0.4|/dev/disk1s1"]
-	timestampResolution = 7000 nanoseconds
-	minRacyThreshold = 0 nanoseconds
-[filesystem "AdoptOpenJDK|11.0.4|/dev/disk1s5"]
-	timestampResolution = 7000 nanoseconds
-	minRacyThreshold = 0 nanoseconds
 [commit]
 	template = /Users/kotarokashihara/.commit_template
 [credential]
@@ -51,3 +48,13 @@
 	prune = true
 [pull]
 	rebase = false
+[init]
+	defaultBranch = main
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false

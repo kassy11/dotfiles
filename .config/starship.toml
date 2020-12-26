@@ -45,17 +45,17 @@ symbol = "🌟 "
 symbol = "💎 "
 
 [golang]
-symbol = "🏎💨 "
+format = "via [🏎💨 $version](bold cyan) "
 
 [nodejs]
-symbol = "🤖 "
+format = "via [🤖 $version](bold green) "
 
 [python]
 symbol = "👾 "
 pyenv_version_name = true
 
 [rust]
-symbol = "🦀 "
+format = "via [🦀 $version](red bold)"
 
 [ocaml]
 symbol = "🐪 "
@@ -67,9 +67,12 @@ format = "via [🐋 $context](blue bold)"
 symbol = "🎁 "
 
 [aws]
+format = 'on [$symbol$profile(\($region\))]($style) '
 style = "bold blue"
 symbol = "🅰 "
-displayed_items = "region"
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
 
 [cmake]
 format = "via CMake "

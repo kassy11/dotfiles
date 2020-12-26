@@ -1,72 +1,76 @@
 #!/bin/zsh
 
-printf '\033[32m%s\033[m\n' 'installing xcode...'
+printf '\033[32m%s\033[m\n' 'Installing commnad line tools...'
 xcode-select --install
 
-printf '\033[32m%s\033[m\n' 'installing homebrew...'
+printf '\033[32m%s\033[m\n' 'Installing homebrew...'
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-printf '\033[32m%s\033[m\n' 'run brew update'
+printf '\033[32m%s\033[m\n' 'Run brew update'
 brew update
 
-printf '\033[32m%s\033[m\n' 'installing homebrew packages...'
+printf '\033[32m%s\033[m\n' 'Installing homebrew packages...'
 brew bundle
 
-printf '\033[32m%s\033[m\n' 'run brew upgrade and cleanup...'
+printf '\033[32m%s\033[m\n' 'Run brew upgrade and cleanup...'
 brew upgrade && brew cleanup
 
-printf '\033[32m%s\033[m\n' 'remove some files for symlinks'
+printf '\033[32m%s\033[m\n' 'Remove some files for symlinks'
 rm -rf ~/.zshrc ~/.zprofile ~/.gitconfig ~/.vimrc ~/.commit_template ~/.config/starship.toml
 rm -rf ~/.ocamlinit ~/.octaverc
-rm -rf ~/Library/LaunchAgents/homebrew-update.plist
 
-printf '\033[32m%s\033[m\n' 'make symbolic links...'
+printf '\033[32m%s\033[m\n' 'Make symbolic links...'
 ln -sf $(pwd)/.zshrc ~/.zshrc 
 ln -sf $(pwd)/.zprofile ~/.zprofile
 ln -sf $(pwd)/.gitconfig ~/.gitconfig
+ln -sf $(pwd)/.gitignore_global ~/.gitignore_global
 ln -sf $(pwd)/.vimrc ~/.vimrc
 ln -sf $(pwd)/.commit_template ~/.commit_template
 ln -s  $(pwd)/.config/starship.toml ~/.config/starship.toml
+ln -s  $(pwd)/.config/gh/config.yml ~/.config/gh/config.yml
 ln -sf $(pwd)/.ocamlinit  ~/.ocamlinit
 ln -sf $(pwd)/.octaverc ~/.octaverc
 ln -s  $(pwd)/.tmux.conf ~/.tmux.conf
-ln -s $(pwd)/homebrew-update.plist ~/Library/LaunchAgents/homebrew-update.plist
-launchctl load ~/Library/LaunchAgents/homebrew-update.plist
 
-printf '\033[32m%s\033[m\n' 'source .zshrc...'
+printf '\033[32m%s\033[m\n' 'Source .zshrc...'
 source ~/.zshrc
 
-printf '\033[32m%s\033[m\n' 'installing zplug...'
+printf '\033[32m%s\033[m\n' 'Installing zplug...'
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer
 
-printf '\033[32m%s\033[m\n' 'installing xxxenv...'
+printf '\033[32m%s\033[m\n' 'Installing xxxenv...'
 
 if [ ! -e ~/.anyenv ];then
-  printf '\033[32m%s\033[m\n' 'init anyenv'
+  printf '\033[32m%s\033[m\n' 'Init anyenv...'
   anyenv install --init
 fi
 if [ ! -e ~/.anyenv/envs/nodenv ];then
-  printf '\033[32m%s\033[m\n' 'installing node through nodenv...'
+  printf '\033[32m%s\033[m\n' 'Installing node through nodenv...'
   anyenv install nodenv
   nodenv install 15.2.1
 fi
 if [ ! -e ~/.anyenv/envs/rbenv ];then
-  printf '\033[32m%s\033[m\n' 'installing ruby through rbenv...'
+  printf '\033[32m%s\033[m\n' 'Installing ruby through rbenv...'
   anyenv install rbenv
-  rbenv install 2.7.2
+  rbenv install 3.0.0
 fi
 if [ ! -e ~/.anyenv/envs/goenv ];then
-  printf '\033[32m%s\033[m\n' 'installing golang through goenv...' 
+  printf '\033[32m%s\033[m\n' 'Installing golang through goenv...' 
   anyenv install goenv
   goenv install 1.15.3
 fi
+if [ ! -e ~/.anyenv/envs/pyenv ];then
+  printf '\033[32m%s\033[m\n' 'Installing golang through goenv...' 
+  anyenv install pyenv
+  pyenv install 3.9.0
+fi
 
-printf '\033[32m%s\033[m\n' 'init opam...'
+printf '\033[32m%s\033[m\n' 'Init opam...'
 if [ ! -e ~/.opam ];then
   opam init
 fi
 
-printf '\033[32m%s\033[m\n' 'installing sdkman...'
+printf '\033[32m%s\033[m\n' 'Installing JVM languages through sdkman...'
 if [ ! -e ~/.sdkman ];then
   curl -s "https://get.sdkman.io" | bash
   source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -88,7 +92,6 @@ if [ ! -e ~/.vim/colors/solarized.vim ];then
   mkdir -p ~/.vim/colors/
   cp ~/vim-colors/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 fi
-
 
 
 exec $SHELL -l
