@@ -1,5 +1,10 @@
 
 
+# ==================== Format ====================
+# branch-name commit-massage
+# :emoji: commit-message
+
+
 # ==================== Emojis ====================
 # 🎉  :tada: 機能追加
 # 🤖  :robot: テストコード追加
@@ -10,7 +15,3 @@
 # 🎨  :art: デザインUI/UX
 # 🚧  :construction: WIP
 # ✨  :sparkles:  initial commit
-
-# ==================== Format ====================
-# :emoji: commit-message
-# branch-name commit-massage
