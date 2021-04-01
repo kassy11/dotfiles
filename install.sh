@@ -4,7 +4,7 @@ printf '\033[32m%s\033[m\n' 'Installing commnad line tools...'
 xcode-select --install
 
 printf '\033[32m%s\033[m\n' 'Installing homebrew...'
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 printf '\033[32m%s\033[m\n' 'Run brew update'
 brew update
@@ -15,19 +15,19 @@ brew bundle
 printf '\033[32m%s\033[m\n' 'Run brew upgrade and cleanup...'
 brew upgrade && brew cleanup
 
-printf '\033[32m%s\033[m\n' 'Remove some files for symlinks'
-rm -rf ~/.zshrc ~/.zprofile ~/.gitconfig ~/.vimrc ~/.commit_template ~/.config/starship.toml
+# printf '\033[32m%s\033[m\n' 'Remove some files for symlinks'
+# rm -rf ~/.zshrc ~/.zprofile ~/.gitconfig ~/.vimrc ~/.commit_template ~/.config/starship.toml
 
-printf '\033[32m%s\033[m\n' 'Make symbolic links...'
-ln -sf $(pwd)/.zshrc ~/.zshrc 
-ln -sf $(pwd)/.zprofile ~/.zprofile
+# printf '\033[32m%s\033[m\n' 'Make symbolic links...'
+# ln -sf $(pwd)/.zshrc ~/.zshrc 
+# ln -sf $(pwd)/.zprofile ~/.zprofile
 # gitconfig はuser名などを変更してから
 # ln -sf $(pwd)/.gitconfig ~/.gitconfig
-ln -sf $(pwd)/.gitignore_global ~/.gitignore_global
-ln -sf $(pwd)/.vimrc ~/.vimrc
-ln -sf $(pwd)/.commit_template ~/.commit_template
-ln -s  $(pwd)/.config/starship.toml ~/.config/starship.toml
-ln -s  $(pwd)/.config/gh/config.yml ~/.config/gh/config.yml
+# ln -sf $(pwd)/.gitignore_global ~/.gitignore_global
+# ln -sf $(pwd)/.vimrc ~/.vimrc
+# ln -sf $(pwd)/.commit_template ~/.commit_template
+# ln -s  $(pwd)/.config/starship.toml ~/.config/starship.toml
+# ln -s  $(pwd)/.config/gh/config.yml ~/.config/gh/config.yml
 # ln -s  $(pwd)/.tmux.conf ~/.tmux.conf
 
 printf '\033[32m%s\033[m\n' 'Source .zshrc...'
