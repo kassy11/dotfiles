@@ -72,8 +72,8 @@ export PATH="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Cur
 # alias and shell-func
 #-----------------------------------
 alias ls='ls -F'
-alias la='ls -a'
-alias ll='ls -alF'
+alias la='ls -aF'
+alias ll='exa -alF'
 alias vi='vim'
 alias rm='trash'
 alias cat='bat'
