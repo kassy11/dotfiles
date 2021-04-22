@@ -40,6 +40,8 @@ deleted = "🗑 "
 
 [java]
 symbol = "🌟 "
+[scala]
+symbol = "🌟 "
 
 [ruby]
 symbol = "💎 "

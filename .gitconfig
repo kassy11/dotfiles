@@ -25,7 +25,7 @@
 [color]
 	ui = true
 [commit]
-	template = /Users/kotarokashihara/.commit_template
+    template = ~/.commit_template
 [credential]
 	helper = osxkeychain
 [difftool "sourcetree"]
@@ -35,7 +35,7 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [ghq]
-	root = ~/dev
+	root = ~/Develop
   user = kassy11
 [filter "lfs"]
 	process = git-lfs filter-process

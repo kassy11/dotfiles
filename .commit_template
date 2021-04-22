@@ -1,16 +1,29 @@
 
 
-# ==================== Emojis ====================
-# 🎉  :tada: 機能追加
-# 🤖  :robot: テストコード追加
-# 🔥　:fire: コード削除
-# ♻️   :recycle: リファクタリング,コードレビュー内容の修正
-# 🐛  :bug: バグ修正
-# 📝  :memo: ドキュメント作成
-# 🎨  :art: デザインUI/UX
-# 🚧  :construction: WIP
-# ✨  :sparkles:  initial commit
+
+# ==================== Overall ====================
+# Conventional Commits に準拠する
 
 # ==================== Format ====================
-# :emoji: commit-message
-# branch-name commit-massage
+# [brach-name] <type>[optional scope]: <description>
+
+# [optional body]
+
+# [optional footer(s)]
+
+# ==================== Type ====================
+# build:	ビルド
+# ci:	CI
+# chore:	雑事（カテゴライズする必要ないようなもの）
+# docs:	ドキュメント
+# feat:	新機能
+# fix:	バグフィックス
+# perf:	パフォーマンス
+# refactor:	リファクタリング
+# revert:	コミット取り消し（git revert）
+# style:	コードスタイル修正
+# test:	テスト
+
+# ==================== Example ====================
+# feat: allow provided config object to extend other configs
+
