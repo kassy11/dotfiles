@@ -1,5 +1,3 @@
-eval "$(starship init zsh)"
-
 # zsh settings
 typeset -U path cdpath fpath manpath
 autoload -U compinit
@@ -23,18 +21,15 @@ setopt no_beep
 unsetopt cdable_vars
 unsetopt cdablevars
 
-### zplug
+# zplug settings
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
-zplug "mafredri/zsh-async"
 zplug "chrissicool/zsh-256color"
 zplug "simonwhitaker/gibo", use:'shell-completions/gibo-completion.zsh', as:plugin #verify
-
-
-# install zplug packages
+## install zplug packages
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
@@ -42,17 +37,28 @@ if ! zplug check --verbose; then
     fi
 fi
 zplug load
+
+# tool settings
+## sdkman
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+## goenv
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
+## pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+## nodenv
+eval "$(nodenv init -)"
+## rbenv
+eval "$(rbenv init - zsh)"
+## starship
+eval "$(starship init zsh)"
 
 
 # ----------------------------------
@@ -159,4 +165,13 @@ if [[ -x `which colordiff` ]]; then
   alias diff='colordiff -u'
 else
   alias diff='diff -u'
+fi
+
+# brew completion
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
 fi
