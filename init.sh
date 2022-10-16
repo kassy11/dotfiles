@@ -26,6 +26,7 @@ ln -sf $(pwd)/.gitignore_global ~/.gitignore_global
 ln -sf $(pwd)/.vimrc ~/.vimrc
 ln -sf $(pwd)/.commit_template ~/.commit_template
 ln -s  $(pwd)/.config/starship.toml ~/.config/starship.toml
+ln -s $(pwd)/clean.sh ~/clean.sh
 
 printf '\033[32m%s\033[m\n' 'Source .zshrc...'
 source ~/.zshrc
