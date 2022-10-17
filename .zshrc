@@ -59,7 +59,7 @@ eval "$(nodenv init -)"
 eval "$(rbenv init - zsh)"
 ## starship
 eval "$(starship init zsh)"
-
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # ----------------------------------
 # alias and shell-func
