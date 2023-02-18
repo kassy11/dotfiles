@@ -50,16 +50,16 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 ## pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 ## nodenv
 eval "$(nodenv init -)"
 ## rbenv
 eval "$(rbenv init - zsh)"
 ## starship
 eval "$(starship init zsh)"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # ----------------------------------
 # alias and shell-func
@@ -175,3 +175,21 @@ then
   autoload -Uz compinit
   compinit
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/kotarokashihara/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/kotarokashihara/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/kotarokashihara/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/kotarokashihara/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+source /Users/kotarokashihara/.config/broot/launcher/bash/br
