@@ -1,0 +1,54 @@
+[user]
+	name = kassy11
+	email = kotaro11kassy@gmail.com
+[alias]
+	st = status --short --branch
+	co = checkout
+	br = branch
+	di = diff --histogram
+	dic = diff --cached --histogram
+  	dit = difftool
+  	ditc = difftool --cached --histogram
+	tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+	c = commit
+  	com = commit
+  	comment = commit -m
+	p = push
+	pu = pull
+	glog = log --all --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Creset%s'
+[core]
+	editor = nvim
+	excludesfile = /Users/kotarokashihara/.gitignore_global
+	autoCRLF = false
+	quotepath = false
+	pager = LESSCHARSET=utf-8 less
+[color]
+	ui = true
+[commit]
+  template = ~/.commit_template
+[core]
+	editor = vim
+[ghq]
+	root = ~/Develop
+  	user = kassy11
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[grep]
+	lineNumber = true
+[fetch]
+	prune = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false

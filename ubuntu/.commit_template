@@ -1,0 +1,17 @@
+
+
+# ==================== Format ====================
+# [brach-name] <type>[optional scope]: <description>
+# [optional body]
+# [optional footer(s)]
+# ==================== Type ====================
+# build:	ビルド
+# ci:	CI
+# chore:	雑事
+# docs:	ドキュメント
+# feat:	新機能
+# fix:	バグフィックス
+# perf:	パフォーマンス
+# refactor:	リファクタリング
+# revert:	コミット取り消し（git revert）
+# style:	コードスタイル修正
