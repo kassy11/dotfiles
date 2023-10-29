@@ -1,0 +1,76 @@
+add_newline = false
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
+
+[character]
+error_symbol = "✗"
+
+[directory]
+style = "#369DE3"
+truncation_length = 0
+truncate_to_repo = false
+
+[git_state]
+# progress_divider = " of "
+cherry_pick = "🍒 PICKING"
+
+[git_branch]
+style = "#FFFF99"
+symbol = "🌱 "
+truncation_symbol = ""
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged = '[++$count](green)'
+renamed = "👅"
+deleted = "🗑 "
+
+[java]
+symbol = "🌟 "
+[scala]
+symbol = "🌟 "
+
+[ruby]
+symbol = "💎 "
+
+[golang]
+format = "via [🏎💨 $version](bold cyan) "
+
+[nodejs]
+format = "via [🤖 $version](bold green) "
+
+[python]
+symbol = "👾 "
+pyenv_version_name = true
+
+[rust]
+format = "via [🦀 $version](red bold)"
+
+[ocaml]
+symbol = "🐪 "
+
+[docker_context]
+format = "via [🐋 $context](blue bold)"
+
+[package]
+symbol = "🎁 "
+
+[aws]
+format = 'on [$symbol$profile(\($region\))]($style) '
+style = "bold blue"
+symbol = "🅰 "
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
+
+[cmake]
+format = "via CMake "
