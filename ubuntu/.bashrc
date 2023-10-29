@@ -162,15 +162,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
-function slack_notice () {
-    cmd='curl -X POST --data-urlencode "payload={\"text\": \"処理開始\" }" https://hooks.slack.com/services/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 >/dev/null 2>&1;'
-    cmd+="SECONDS=0;"
-    cmd+=$1
-    cmd+=';curl -X POST --data-urlencode "payload={\"text\": \"処理終了\ntime(s):$SECONDS\" }" https://hooks.slack.com/services/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 >/dev/null 2>&1'
-    nohup bash -c "${cmd}" &
-}
-
 export CUDA_PATH=/usr/local/cuda-11.7
 export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64:${LD_LIBRARY_PATH}
 export PATH=/usr/local/cuda-11.7/bin:${PATH}
