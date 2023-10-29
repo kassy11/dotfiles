@@ -96,7 +96,7 @@ chpwd() {
 
 ### history with fzf
 function fzf-history-selection() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | fzf --layout=reverse`
+    BUFFER=`history -n 1 | head -n 100  | awk '!a[$0]++' | fzf --layout=reverse`
     CURSOR=$#BUFFER
     zle reset-prompt
 }

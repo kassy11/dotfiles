@@ -61,7 +61,7 @@ alias la='exa -aF'
 alias ll='exa -alF'
 alias vi='vim'
 alias rm='trash'
-alias cat='bat'
+alias cat='batcat'
 alias grep='rg'
 alias dfind='fd'
 alias ..='cd ..'
@@ -87,7 +87,7 @@ chpwd() {
 
 ### history with fzf
 function fzf-history-selection() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | fzf --layout=reverse`
+    BUFFER=`history -n 1 | head -n 100  | awk '!a[$0]++' | fzf --layout=reverse`
     CURSOR=$#BUFFER
     zle reset-prompt
 }
@@ -158,17 +158,17 @@ else
   alias diff='diff -u'
 fi
 
-# # >>> conda initialize >>>
-# # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/mnt/2tb/home/kashihara/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/mnt/2tb/home/kashihara/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/mnt/2tb/home/kashihara/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/mnt/2tb/home/kashihara/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# # <<< conda initialize <<<
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/mnt/2tb/home/kashihara/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/mnt/2tb/home/kashihara/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/mnt/2tb/home/kashihara/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/mnt/2tb/home/kashihara/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
