@@ -33,6 +33,7 @@ ln -s  $(pwd)/.config/starship.toml ~/.config/starship.toml
 
 printf '\033[32m%s\033[m\n' 'Intall some CLI tools'
 go install github.com/x-motemen/ghq@latest
+go install github.com/simonwhitaker/gibo@latest
 cargo install tokei
 sudo apt install exa -y
 sudo apt install fzf -y
