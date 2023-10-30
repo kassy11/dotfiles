@@ -30,12 +30,13 @@ ln -sf $(pwd)/.gitignore_global ~/.gitignore_global
 ln -sf $(pwd)/.vimrc ~/.vimrc
 ln -sf $(pwd)/.commit_template ~/.commit_template
 ln -s  $(pwd)/.config/starship.toml ~/.config/starship.toml
+ln -sf $(pwd)/update.sh ~/update.sh
 
 printf '\033[32m%s\033[m\n' 'Intall some CLI tools'
 go install github.com/x-motemen/ghq@latest
 go install github.com/simonwhitaker/gibo@latest
 cargo install tokei
-sudo apt install exa -y
+cargo install exa
 sudo apt install fzf -y
 sudo apt install fd-find -y
 sudo apt install trash-cli -y
