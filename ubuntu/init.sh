@@ -22,6 +22,10 @@ rm -rf ~/go && sudo tar -C ~/ -xzfgo1.21.3.linux-amd64.tar.gz
 wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
 chmod +x Anaconda3-2023.09-0-Linux-x86_64.sh
 ./Anaconda3-2023.09-0-Linux-x86_64.sh
+<<<<<<< HEAD
+=======
+conda init zsh
+>>>>>>> 0a87f86c541ff1c5f6895b323c412c2e1559c8f8
 
 # back to dotfiles
 cd -
