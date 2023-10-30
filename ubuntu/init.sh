@@ -18,6 +18,10 @@ curl -sS https://starship.rs/install.sh | sh
 # go
 wget https://go.dev/dl/go1.21.3.linux-amd64.tar.gz
 rm -rf ~/go && sudo tar -C ~/ -xzfgo1.21.3.linux-amd64.tar.gz
+# Anaconda
+wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
+chmod +x Anaconda3-2023.09-0-Linux-x86_64.sh
+./Anaconda3-2023.09-0-Linux-x86_64.sh
 
 # back to dotfiles
 cd -
