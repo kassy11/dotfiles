@@ -18,6 +18,15 @@ brew upgrade && brew cleanup
 printf '\033[32m%s\033[m\n' 'Remove some files for symlinks'
 rm -rf ~/.zshrc ~/.zprofile ~/.gitconfig ~/.vimrc ~/.commit_template ~/.config/starship.toml
 
+cd
+# zplug
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+# starship
+curl -sS https://starship.rs/install.sh | sh
+
+# back to dotfiles
+cd -
+
 printf '\033[32m%s\033[m\n' 'Make symbolic links...'
 ln -sf $(pwd)/.zshrc ~/.zshrc
 ln -sf $(pwd)/.zprofile ~/.zprofile
