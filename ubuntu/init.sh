@@ -1,11 +1,21 @@
-#!/bin/zsh
+#!/bin/sh
 
 printf '\033[32m%s\033[m\n' 'apt updating'
 sudo apt update
 sudo apt upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y
+
+printf '\033[32m%s\033[m\n' 'Install zsh and set default'
+sudo apt-get install zsh -y
+chsh -s $(which zsh)
+exec $SHELL -l
 
 printf '\033[32m%s\033[m\n' 'Remove some files for symlinks'
 rm -rf ~/.zshrc ~/.zprofile ~/.gitconfig ~/.vimrc ~/.commit_template ~/.config/starship.toml
+
+printf '\033[32m%s\033[m\n' 'Install curl and git'
+sudo apt install curl git -y
 
 printf '\033[32m%s\033[m\n' 'Download some binary'
 cd
@@ -26,6 +36,7 @@ conda init zsh
 
 # back to dotfiles
 cd -
+exec $SHELL -l
 
 printf '\033[32m%s\033[m\n' 'Make symbolic links...'
 ln -sf $(pwd)/.zshrc ~/.zshrc
@@ -37,14 +48,12 @@ ln -sf $(pwd)/.commit_template ~/.commit_template
 ln -s  $(pwd)/.config/starship.toml ~/.config/starship.toml
 ln -sf $(pwd)/update.sh ~/update.sh
 
-printf '\033[32m%s\033[m\n' 'Intall some CLI tools'
+printf '\033[32m%s\033[m\n' 'Install some CLI tools'
 go install github.com/x-motemen/ghq@latest
 go install github.com/simonwhitaker/gibo@latest
 cargo install tokei
 cargo install exa
-sudo apt install fzf -y
-sudo apt install fd-find -y
-sudo apt install trash-cli -y
+sudo apt install fzf bat trash-cli -y
 sudo apt-get install ripgrep -y
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
