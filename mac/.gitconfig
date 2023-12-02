@@ -28,6 +28,8 @@
     template = ~/.commit_template
 [credential]
 	helper = osxkeychain
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -58,3 +60,5 @@
 	tool = vimdiff
 [mergetool]
 	prompt = false
+[credential "https://dev.azure.com"]
+	useHttpPath = true

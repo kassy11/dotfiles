@@ -49,11 +49,6 @@ export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
-## pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 ## nodenv
 eval "$(nodenv init -)"
 ## rbenv
@@ -68,6 +63,7 @@ alias ls='exa -F'
 alias la='exa -aF'
 alias ll='exa -alF'
 alias vi='vim'
+alias vim='nvim'
 alias rm='trash'
 alias cat='bat'
 alias grep='rg -n'
@@ -193,3 +189,7 @@ unset __conda_setup
 
 
 source /Users/kotarokashihara/.config/broot/launcher/bash/br
+
+function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

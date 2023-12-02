@@ -49,8 +49,7 @@ format = "via [🏎💨 $version](bold cyan) "
 format = "via [🤖 $version](bold green) "
 
 [python]
-symbol = "👾 "
-pyenv_version_name = true
+symbol = "🐍 "
 
 [rust]
 format = "via [🦀 $version](red bold)"
