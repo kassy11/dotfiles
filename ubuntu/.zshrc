@@ -62,7 +62,7 @@ alias ll='exa -alF'
 alias vi='vim'
 alias rm='trash'
 alias cat='batcat'
-alias grep='rg'
+alias grep='rg -n'
 alias dfind='fd'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -153,7 +153,7 @@ function gpr(){
 }
 
 if [[ -x `which colordiff` ]]; then
-  alias diff='colordiff -u'
+  alias diff='colordiff -y'
 else
   alias diff='diff -u'
 fi
